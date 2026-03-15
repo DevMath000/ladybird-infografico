@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lady Bird — Emoções da Adolescência</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+    body{background:#fdf6f0;color:#222;overflow-x:hidden;}
+    header{
+  height:100vh;
+  background:linear-gradient(rgba(45,15,25,.55),rgba(20,10,15,.65)),url('https://upload.wikimedia.org/wikipedia/en/6/61/Lady_Bird_poster.jpeg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  animation:fadeHero 2s ease;
+    }
+    header h1{font-size:4rem;font-weight:700;animation:slideDown 1.5s ease;}
+    header p{max-width:850px;font-size:1.3rem;margin-top:20px;animation:fadeIn 2.5s ease;}
+    section{padding:80px 8%;}
+    h2{font-size:2.3rem;margin-bottom:30px;color:#b44f4f;position:relative;}
+    h2::after{content:'';width:70px;height:4px;background:#b44f4f;position:absolute;left:0;bottom:-10px;border-radius:2px;}
+    .summary{
+      background:white;
+      border-radius:20px;
+      padding:35px;
+      box-shadow:0 15px 35px rgba(0,0,0,.08);
+      animation:fadeUp 1.5s ease;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:25px;
+      margin-top:30px;
+    }
+    .card{
+      background:white;
+      border-radius:20px;
+      padding:30px;
+      box-shadow:0 15px 30px rgba(0,0,0,.08);
+      transition:.5s;
+      position:relative;
+      overflow:hidden;
+      animation:fadeUp 1s ease;
+    }
+    .card:hover{
+      transform:translateY(-12px) scale(1.03);
+      box-shadow:0 20px 45px rgba(0,0,0,.15);
+    }
+    .card::before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:6px;
+      background:#d66b6b;
+      top:0;
+      left:0;
+    }
+    .card h3{margin-bottom:15px;color:#b44f4f;font-size:1.4rem;}
+    .timeline{
+      border-left:5px solid #b44f4f;
+      padding-left:25px;
+      margin-top:20px;
+    }
+    .timeline div{
+      margin-bottom:35px;
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      box-shadow:0 10px 25px rgba(0,0,0,.08);
+      animation:fadeUp 1.3s ease;
+    }
+    footer{
+      background:#1d1d1d;
+      color:white;
+      text-align:center;
+      padding:35px;
+      margin-top:50px;
+    }
+    @keyframes fadeHero{from{opacity:0}to{opacity:1}}
+    @keyframes slideDown{from{transform:translateY(-60px);opacity:0}to{transform:translateY(0);opacity:1}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes fadeUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}
+    @media(max-width:768px){
+      header h1{font-size:2.4rem;}
+      header p{font-size:1rem;padding:0 15px;}
+      section{padding:50px 5%;}
+      h2{font-size:1.8rem;}
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+               }
+ /* BOLHAS DE EMOÇÕES */
+
+.emotion-path{
+  position:relative;
+  padding:120px 0 80px 0;
+  display:flex;
+  justify-content:center;
+}
+
+.emotion-container{
+  display:flex;
+  gap:70px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.emotion-point{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* bolha */
+
+.emotion-photo{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, #ffffff, #ffd6d6);
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  position:relative;
+  animation:floatBubble 6s ease-in-out infinite;
+}
+
+/* brilho da bolha */
+
+.emotion-photo::after{
+  content:'';
+  position:absolute;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  background:rgba(255,255,255,.7);
+  top:18px;
+  left:25px;
+  filter:blur(3px);
+}
+
+/* nome da emoção */
+
+.emotion-label{
+  margin-top:15px;
+  font-weight:600;
+  color:#b44f4f;
+  font-size:1rem;
+  text-align:center;
+}
+
+/* animação */
+
+@keyframes floatBubble{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-25px)}
+  100%{transform:translateY(0)}
+}
+
+.emotion-point:nth-child(2) .emotion-photo{animation-delay:1s}
+.emotion-point:nth-child(3) .emotion-photo{animation-delay:2s}
+.emotion-point:nth-child(4) .emotion-photo{animation-delay:3s}
+.emotion-point:nth-child(5) .emotion-photo{animation-delay:4s}
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="backdrop-filter:blur(4px);padding:30px;border-radius:20px;animation:fadeIn 2s ease;">
+    <h1>Lady Bird</h1>
+    <p>Infográfico sobre emoções da adolescência no ensino médio, inspirado visualmente no universo do filme.</p>
+  </div>
+</header>
+
+<section>
+  <h2>Resumo do Filme</h2>
+  <div class="summary reveal">
+    <img src="https://posterspy.com/wp-content/uploads/2018/04/Poster-2018-Lady-Bird-v2-Commercial-1200x1703.jpg" alt="Lady Bird Poster" style="width:100%;max-width:350px;border-radius:18px;display:block;margin:0 auto 25px auto;box-shadow:0 15px 35px rgba(0,0,0,.2);">
+    <p>O filme acompanha Christine McPherson, conhecida como Lady Bird, durante seu último ano escolar. Ela vive conflitos familiares intensos, sente necessidade de independência, enfrenta inseguranças sociais e descobre como amadurecer emocionalmente diante das mudanças do fim da adolescência.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Emoções da Adolescência</h2>
+  <div class="grid">
+    <div class="card reveal"><img src="https://2.bp.blogspot.com/-ywOQcTGIPLk/W2MIsh_OGtI/AAAAAAAADHQ/UJ2z3IQgpR47pxrrCinMk1s3MPTfTK0vQCLcBGAs/s1600/quem-sou-eu.png" style="width:100%;border-radius:12px;margin-bottom:15px;"><h3>Identidade</h3><p>Lady Bird cria um novo nome para afirmar quem deseja ser. Isso representa o processo de construção da identidade durante a adolescência.</p></div>
+    <div class="card reveal"><img src="https://versiculoscomentados.com.br/estudos-biblicos/wp-content/uploads/2021/10/versiculos-sobre-inseguranca-735x400.jpg" style="width:100%;border-radius:12px;margin-bottom:15px;"><h3>Insegurança</h3><p>O medo de não ser aceita socialmente aparece em amizades, aparência e status escolar.</p></div>
+    <div class="card reveal"><img src="https://tse3.mm.bing.net/th/id/OIP.4c1HwC5VxWfDn7eEGgWamwHaEO?w=700&h=399&rs=1&pid=ImgDetMain&o=7&rm=3" style="width:100%;border-radius:12px;margin-bottom:15px;"><h3>Ansiedade</h3><p>O futuro universitário e as escolhas pessoais geram pressão emocional constante.</p></div>
+    <div class="card reveal"><img src="https://tse1.mm.bing.net/th/id/OIP.zrB4nbRe5T-Ch3lUH5zaPgHaDt?rs=1&pid=ImgDetMain&o=7&rm=3" style="width:100%;border-radius:12px;margin-bottom:15px;"><h3>Conflito Familiar</h3><p>A relação com a mãe revela amor, cobrança e dificuldade de comunicação.</p></div>
+    <div class="card reveal"><img src="https://images.squarespace-cdn.com/content/v1/569ecea9b20943c520056ca5/fad25482-9b8b-409c-9d46-507227910692/overcoming-insecurity.jpg" style="width:100%;border-radius:12px;margin-bottom:15px;"><h3>Solidão</h3><p>Mesmo cercada por pessoas, ela sente momentos de incompreensão emocional.</p></div>
+    <div class="card reveal"><img src="https://www.uai.com.br/uainoticias/wp-content/uploads/2025/12/Copia-de-Copia-de-Mural-marrom-2025-12-18T170049.506-1024x576.jpg" style="width:100%;border-radius:12px;margin-bottom:15px;"><h3>Autoaceitação</h3><p>No final, ela começa a reconhecer melhor sua própria história e amadurecimento.</p></div>
+    <div class="card reveal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZHbQ5qUHTXbC998eYjHseJ_rVoKcoHZwhh_Jv1zl9quVaJXS90tpMCNew&s=10" style="width:100%;border-radius:12px;margin-bottom:15px;"><h3>Vergonha</h3><p>A comparação social gera desconforto e necessidade de esconder aspectos da realidade familiar.</p></div>
+    <div class="card reveal"><img src="https://cdn.pensador.com/img/imagens/me/ns/mensagens_de_esperanca_no_futuro_f_l.jpg" style="width:100%;border-radius:12px;margin-bottom:15px;"><h3>Esperança</h3><p>O desejo de mudança representa expectativa de crescimento pessoal.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Linha do Tempo Emocional</h2>
+  <div class="timeline">
+    <div class="reveal"><h3>Início</h3><p>Desejo intenso de mudança e rejeição às limitações familiares.</p></div>
+    <div class="reveal"><h3>Desenvolvimento</h3><p>Relacionamentos, mentiras sociais e amadurecimento.</p></div>
+    <div class="reveal"><h3>Final</h3><p>Reconhecimento afetivo da família e crescimento emocional.</p></div>
+  </div>
+</section>
+
+<section>
+<h2>Memórias Emocionais</h2>
+
+<div class="emotion-path">
+
+<div class="emotion-container">
+
+<div class="emotion-point reveal">
+<div class="emotion-photo">
+<img src="https://tse3.mm.bing.net/th/id/OIP.v5eDQ890UE6TxOEBPLPz9wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" style="width:100%;height:100%;object-fit:cover;">
+</div>
+<div class="emotion-label">Alegria</div>
+</div>
+
+<div class="emotion-point reveal">
+<div class="emotion-photo">
+<img src="https://www.unidivers.fr/wp-content/uploads/2018/03/lady-bird.jpg" style="width:100%;height:100%;object-fit:cover;">
+</div>
+<div class="emotion-label">Solidão</div>
+</div>
+
+<div class="emotion-point reveal">
+<div class="emotion-photo">
+<img src="https://veja.abril.com.br/wp-content/uploads/2018/03/lady-bird.png" style="width:100%;height:100%;object-fit:cover;">
+</div>
+<div class="emotion-label">Raiva</div>
+</div>
+
+<div class="emotion-point reveal">
+<div class="emotion-photo">
+<img src="https://canoticias.pt/wp-content/uploads/2020/03/critica-cinema-lady-bird-critica-cinema-lady-bird.jpg" style="width:100%;height:100%;object-fit:cover;">
+</div>
+<div class="emotion-label">Tristeza</div>
+</div>
+
+<div class="emotion-point reveal">
+<div class="emotion-photo">
+<img src="https://i.ytimg.com/vi/WS9UZpEVx9c/hqdefault.jpg" style="width:100%;height:100%;object-fit:cover;">
+</div>
+<div class="emotion-label">Amor</div>
+</div>
+
+</div>
+</div>
+</section>
+  
+<footer>
+  Lady Bird — Trabalho sobre emoções da adolescência no Ensino Médio.
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+window.addEventListener('scroll', ()=>{
+  reveals.forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.style.opacity='1';
+      el.style.transform='translateY(0)';
+    }
+  });
+});
+reveals.forEach(el=>{
+  el.style.opacity='0';
+  el.style.transform='translateY(60px)';
+  el.style.transition='all 1s ease';
+});
+</script>
+
+</body>
+  </html>
+  
